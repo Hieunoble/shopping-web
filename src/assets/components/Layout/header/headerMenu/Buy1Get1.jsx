@@ -4,10 +4,11 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 
 const Buy1Get1 = () => {
   return (
-    <div>
-      <div className='menu'>
+    <div className='menu'>
+      <div className='menu-item'>
         <a href="">Buy 1 Get 1</a>
-        <RiArrowDropDownLine />
+        {/* <RiArrowDropDownLine className='dropIcon' />
+         */}
       </div>
     </div>
   )

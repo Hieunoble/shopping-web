@@ -1,0 +1,218 @@
+.icon-dropdown.user {
+  display: none;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.4s cubic-bezier(0, 1, 0.4, 1), transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1), visibility 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1);
+  max-width: 400px;
+  position: absolute;
+  top: calc(100% + 15px);
+  left: auto;
+  right: -70px;
+  z-index: 990;
+  width: 350px;
+  min-width: 280px;
+  border-radius: 3px;
+  color: #677279;
+  background: #fff;
+  border: solid 1px #dfe3e8;
+}
+
+.dropdown-arrow {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  position: absolute;
+  right: 70px;
+  bottom: calc(100% - 5px);
+  margin-bottom: -8px;
+  color: white;
+  font-size: 30px;
+}
+
+.dropdown-box {
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  overflow: hidden;
+  padding: 20px 15px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown-box p { 
+  border: none ;
+}
+
+.login-box {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  transition: height 0.2s ease-in-out;
+  text-align: center;
+}
+
+.login-header {
+  display: block
+}
+
+.login-header h2 {
+  color: #252a2b;
+  margin: 0 0 13px 0;
+  font-weight: 700;
+  line-height: 1.2;
+  display: block;
+  font-size: 1.5em;
+  /* margin-block-start: 0.83em; */
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  font-style: normal;
+  text-transform: uppercase;
+}
+
+.login-account-action p,
+.login-header p {
+  margin: 0 0 10px 0;
+  line-height: 21px;
+  display: block;
+  /* margin-block-start: 1em; */
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 12px;
+  text-transform: lowercase;
+  font-weight: 100;
+  opacity: .5;
+}
+
+.login-account {
+  .login-account {
+    font-size: 12px;
+  }
+}
+
+.form-input-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px
+}
+
+.form-input-wrapper input {
+  display: block;
+  padding: 14px 10px 3px;
+  border-radius: 2px;
+  border: 1px solid #d4d6d8;
+  width: 100%;
+  line-height: normal;
+  height: 42px;
+  color: #1e2d7d;
+  resize: none;
+  font-size: 12px;
+  outline: none;
+  box-shadow: 0 1px rgba(212, 214, 216, 0.25) inset;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+/* form input:focus { 
+
+} */
+
+form label {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  line-height: 42px;
+  font-size: 12px;
+  margin-bottom: 0;
+  color: #677279;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transform-origin: left top;
+  transform-origin: left top;
+  transition: -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+.sitebox-recaptcha {
+  padding: 6px 0 0;
+  text-align: left;
+  color: #9e9e9e;
+  font-size: 13px;
+}
+
+.login-account-action a,
+.sitebox-recaptcha a {
+  color: #2962ff;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  border-color: #e85205;
+}
+
+.signinBtn {
+  width: 100%;
+  outline: none;
+  padding: 0px 28px;
+  height: 42px;
+  line-height: 42px;
+  color: #fff;
+  /* border-color: #e85205; */
+}
+
+button.signinBtn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 28px;
+  line-height: normal;
+  border: 1px solid #ffffff;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: 1px;
+  background-color: transparent;
+  /* -webkit-transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
+  z-index: 1;
+  color: #252a2b;
+  overflow: hidden;
+  cursor: pointer;
+  background: #e85205;
+}
+
+button.signinBtn:hover {
+  width: 100%;
+  outline: none;
+  padding: 0px 28px;
+  height: 42px;
+  line-height: 42px;
+  transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  background: transparent;
+  color: #252a2b;
+  border-color: #e85205;
+}
+
+.login-account-action {
+  margin-top: 16px;
+  font-size: 12px;
+}
+
+.login-account-action>p { 
+  margin-bottom: 4px;
+}
+
+.login-account-action a {
+  color: #e85205;
+  transition: color 0.2s ease-in-out;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  outline: none;
+}

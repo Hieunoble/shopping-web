@@ -1,17 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Router, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Header from './assets/components/header/Header'
+import { publicRoutes } from './assets/route'
+import { DefauLayout } from './assets/components/Layout'
+import { Fragment } from 'react'
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [count, setCount] = useState(0)
+
 
   return (
-    <div>
-      <Header />
-      {/* <Body/>
-      <Footer/> */}
+    <div className='App'>
+      <Routes>
+        {publicRoutes.map((route, index) => {
+          const Page = route.component
+
+          let Layout = DefauLayout
+
+          if (route.layout) {
+            Layout = route.layout
+          } else if (route.layout === null) {
+            Layout = Fragment
+          }
+
+          return (<Route
+            key={index}
+            path={route.path}
+            element={
+              <Layout>
+                <Page />
+              </Layout>
+            }
+          />)
+        })}
+      </Routes>
     </div>
   )
 }
