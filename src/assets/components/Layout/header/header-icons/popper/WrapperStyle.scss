@@ -1,0 +1,12 @@
+.wrapper-popper {
+  position: relative;
+  height: 370px;
+  max-height: min((100vh - 96px) - 60px, 734px);
+  min-height: 100px;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: rgb(0 0 0 / 12%) 0 2px 12px;
+  background: rgb(60, 58, 58);
+  font-size: 12px;
+  transition: opacity 150ms linear;
+}

@@ -1,0 +1,32 @@
+.wrapper-heading-home {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.container-fluid {
+  max-width: 1600px;
+  padding: 0 85px;
+}
+
+.site-animation {
+  opacity: 1;
+  transform: translateY(0);
+  a { 
+    color: #252a2b;
+    line-height: 1.1;
+    transition: opacity 150ms linear, color 150ms linear, background 150ms linear;
+    text-decoration: none;
+    outline: none;
+    background-color: transparent;
+    margin: 0;
+    font-size: 37px;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  a:hover { 
+    color: #e85205;
+  }
+}
+

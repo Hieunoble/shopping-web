@@ -42,8 +42,8 @@
   opacity: 1;
 }
 
-.dropdown-box p { 
-  border: none ;
+.dropdown-box p {
+  border: none;
 }
 
 .login-box {
@@ -158,32 +158,33 @@ form label {
 
 .signinBtn {
   width: 100%;
+  border: 1px solid transparent;
   outline: none;
   padding: 0px 28px;
   height: 42px;
   line-height: 42px;
   color: #fff;
-  /* border-color: #e85205; */
+  border-color: #e85205;
 }
 
-button.signinBtn {
+button {
   position: relative;
   display: inline-block;
   padding: 10px 28px;
   line-height: normal;
-  border: 1px solid #ffffff;
+  border: 1px solid transparent;
   border-radius: 0;
+  background: #e85205;
   text-transform: uppercase;
   font-size: 12px;
   text-align: center;
   letter-spacing: 1px;
-  background-color: transparent;
+  // background-color: transparent;
   /* -webkit-transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86); */
   z-index: 1;
   color: #252a2b;
   overflow: hidden;
   cursor: pointer;
-  background: #e85205;
 }
 
 button.signinBtn:hover {
@@ -203,7 +204,7 @@ button.signinBtn:hover {
   font-size: 12px;
 }
 
-.login-account-action>p { 
+.login-account-action>p {
   margin-bottom: 4px;
 }
 

@@ -1,9 +1,9 @@
 import React from 'react'
-import WrapperStyle from './WrapperStyle.css'
+import WrapperStyle from './WrapperStyle.scss'
 
 const Wrapper = ({ children }) => {
   return (
-    <div className='wrapper'>
+    <div className='wrapper-popper'>
       {children}
     </div>
   )

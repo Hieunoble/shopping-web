@@ -6,8 +6,8 @@ import Address from './headerMenu/Address'
 import Policies from './headerMenu/Policies'
 import Search from './header-icons/search/Search'
 import Users from './header-icons/user/Users'
-import Cart from './header-icons/Cart'
-import HeaderStyle from "../header/HeaderStyle.css"
+import Cart from './header-icons/cart/Cart.jsx'
+import HeaderStyle from "../header/HeaderStyle.scss"
 
 const Header = () => {
   return (

@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Banner from '../../components/Layout/DefaultLayout/components/banner/Banner.jsx'
+import Body from '../../components/Layout/body/Body.jsx'
+import NewCollection from '../../components/Layout/newCollection/NewCollection.jsx'
+import HeadingHome from '../../components/Layout/headingHome/HeadingHome.jsx'
+import axios from 'axios'
 // import HeaderStyle from "./HeaderStyle.css"
 // import MenuProduct from './header-menu/Product'
 // import Buy1Get1 from './header-menu/Buy1Get1'
@@ -11,9 +15,30 @@ import Banner from '../../components/Layout/DefaultLayout/components/banner/Bann
 // import Users from './header-icons/Users'
 
 const Home = () => {
+
+  const [productList, setProductList] = useState([])
+
+  useEffect(() => {
+    axios.get('https://fakestoreapi.com/products')
+      .then((storeData) => {
+        const arrayStore = [...storeData.data]
+        console.log(arrayStore);
+        setProductList(arrayStore)
+        return storeData
+      })
+      .catch((error) => {
+        console.log('Error: ', error)
+      })
+  }, [])
+
   return (
     <div className='main-home'>
-      Home
+      <HeadingHome />
+      <NewCollection />
+      <Body
+        productList={productList}
+
+      />
     </div>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { RiArrowDropDownLine } from 'react-icons/ri'
-
+import HeaderStyle from './HeaderStyle.scss'
 
 const Buy1Get1 = () => {
   return (

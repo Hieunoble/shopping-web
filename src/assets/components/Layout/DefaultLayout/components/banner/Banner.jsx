@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerStyle from './BannerStyle.css'
+import BannerStyle from './BannerStyle.scss'
 
 const Banner = () => {
   return (
@@ -9,4 +9,4 @@ const Banner = () => {
   )
 }
 
-export default Banner
+export default Banner 

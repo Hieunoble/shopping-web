@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaUserCircle } from 'react-icons/fa'
-import HeaderIconStyles from '../HeaderIconStyles.css'
 import { VscTriangleUp } from 'react-icons/vsc'
-import UserDrop from './UserDrop.css'
+import HeaderIconStyles from '../HeaderIconStyles.scss'
+import UserDrop from './UserDrop.scss'
 
 const Users = () => {
   return (

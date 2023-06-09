@@ -1,7 +1,9 @@
 import React from 'react'
 import Header from '../../Layout/header/Header.jsx'
 import Banner from './components/banner/Banner'
-import styles from './styles.css'
+import Styles from './Styles.scss'
+import Footer from '../footer/Footer.jsx'
+import BottomFooter from '../bottomFooter/BottomFooter.jsx'
 
 const DefaultLayout = ({ children }) => {
   return (
@@ -10,6 +12,8 @@ const DefaultLayout = ({ children }) => {
       <div className="container">
         <Banner />
         <div className="content">{children}</div>
+        <Footer />
+        <BottomFooter />
       </div>
     </div>
   )

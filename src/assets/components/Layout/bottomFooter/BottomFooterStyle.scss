@@ -1,0 +1,16 @@
+.bottom-footer p {
+  margin-bottom: 0;
+
+  a {
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    color: #252a2b;
+  }
+
+  a:hover {
+    color: #e85205;
+    text-decoration: none;
+    outline: none;
+  }
+}

@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { VscTriangleUp } from 'react-icons/vsc'
 import Tippy from '@tippyjs/react/headless';
-
-import HeaderIconStyles from '../HeaderIconStyles.css'
-import SearchDrop from './SearchDrop.css'
-
 import { Wrapper as PopperWrapper } from '../popper/index.js'
+
+import HeaderIconStyles from '../HeaderIconStyles.scss'
+import SearchDrop from './SearchDrop.scss'
+import SearchItem from '../searchItem/SearchItem.jsx';
+
 
 
 const Search = () => {
@@ -35,9 +36,12 @@ const Search = () => {
           <div className="dropdown-box">
             <p>Search</p>
             <div className="find">
+
+              {/* Tippy's default position is absolute => render fail => other solution */}
               <Tippy
                 interactive
-                placement='bottom'
+                offset={[20, 10,]}
+                placement='bottom-start'
                 visible={searchResult.length > 0}
                 content="Search"
                 render={attrs => (
@@ -46,7 +50,11 @@ const Search = () => {
                   <div
                     className='search-result' tabIndex="-1" {...attrs}
                   >
-                    Result
+                    <PopperWrapper>
+                      <div className="item-wrapper">
+                        <SearchItem />
+                      </div>
+                    </PopperWrapper>
                   </div>
                 )}
               >

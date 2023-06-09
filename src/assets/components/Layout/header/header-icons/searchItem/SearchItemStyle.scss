@@ -1,0 +1,18 @@
+.item-wrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px;
+  border-bottom: 1px dotted #dfe0e1;
+  clear: both;
+}
+
+.item-title {
+  display: block;
+}
+
+.item-img {
+  height: 40px;
+  width: 40px;
+}

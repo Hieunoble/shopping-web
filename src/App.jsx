@@ -1,8 +1,8 @@
 import { Router, Routes, Route } from 'react-router-dom'
-import './App.css'
 import { publicRoutes } from './assets/route'
 import { DefauLayout } from './assets/components/Layout'
 import { Fragment } from 'react'
+import './App.scss'
 
 
 function App() {
@@ -23,15 +23,16 @@ function App() {
             Layout = Fragment
           }
 
-          return (<Route
-            key={index}
-            path={route.path}
-            element={
-              <Layout>
-                <Page />
-              </Layout>
-            }
-          />)
+          return (
+            <Route
+              key={index}
+              path={route.path}
+              element={
+                <Layout>
+                  <Page />
+                </Layout>
+              }
+            />)
         })}
       </Routes>
     </div>
