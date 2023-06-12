@@ -23,6 +23,7 @@
   transition: opacity 150ms linear, color 150ms linear, background 150ms linear;
 }
 
+
 .menu-item a {
   color: var(--main-color);
   text-decoration: none;
@@ -42,8 +43,23 @@
 .sub_menu {
   display: block;
   display: none;
+  animation: openSubMenu ease-in-out .2s;
   list-style-type: none;
+
+  @keyframes openSubMenu {
+    from {
+      opacity: 0;
+      transform: translateY(-5px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }
+
+
 
 .sub_menu {
   position: absolute;
@@ -74,4 +90,3 @@
   text-decoration: none;
   text-transform: uppercase;
 }
-

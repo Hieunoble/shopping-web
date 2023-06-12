@@ -1,5 +1,5 @@
 //import Layout 
-import { HeaderOnly } from '../components/Layout/index.js';
+import { HeaderOnly, IteamInfo } from '../components/Layout/index.js';
 
 import Address from '../pages/address/Address.jsx';
 import Buy1Get1 from '../pages/buy1Get1/Buy1Get1.jsx';
@@ -8,6 +8,7 @@ import Items from '../pages/item/Items.jsx';
 import Policies from '../pages/policies/Policies.jsx';
 import Products from '../pages/products/Products.jsx'
 import SaleUp from '../pages/saleup/SaleUp.jsx';
+import Item from '../components/Layout/product/Item.jsx';
 
 const privateRoutes = [];
 
@@ -19,9 +20,8 @@ const publicRoutes = [
   { path: 'address', component: Address, layout: HeaderOnly },
   { path: 'policies', component: Policies, layout: HeaderOnly },
   { path: 'item', component: Items, layout: null },
+  { path: 'san-pham', component: Item, layout: IteamInfo },
 ];
-// publicRoutes.map(item => {
-//   console.log(item.path);
-// })
+
 
 export { publicRoutes, privateRoutes }

@@ -19,10 +19,10 @@ const Home = () => {
   const [productList, setProductList] = useState([])
 
   useEffect(() => {
-    axios.get('https://fakestoreapi.com/products')
+    axios.get('https://api.escuelajs.co/api/v1/products')
       .then((storeData) => {
         const arrayStore = [...storeData.data]
-        console.log(arrayStore);
+        // console.log(arrayStore);
         setProductList(arrayStore)
         return storeData
       })
@@ -36,8 +36,7 @@ const Home = () => {
       <HeadingHome />
       <NewCollection />
       <Body
-        productList={productList}
-
+        productList={productList} 
       />
     </div>
   )

@@ -1,10 +1,12 @@
 import React from 'react'
-import BodyStyle from './BodyStyle.scss'
+import { Route } from 'react-router'
+import { Link } from 'react-router-dom'
+import './BodyStyle.scss'
+import Products from '../product/Item'
 
 const Body = ({ ...props }) => {
+
   const newList = props.productList
-  newList.map((product) => {
-  })
 
   return (
     <div className="body-wrapper">
@@ -12,22 +14,25 @@ const Body = ({ ...props }) => {
         <div className="row">
           {newList.map((item, index) => {
             return (
-              <div
+              <Link
                 key={index}
+                to={"/san-pham"
+                  // + item.category.name
+                }
                 className="col-md-5"
               >
                 <div className="product-block">
                   <div className="product-img">
-                    <img src={item.image} alt="ao-phong" />
+                    <img src={item.category.image} alt="ao-phong" />
                   </div>
                   <div className="product-detail">
                     <div className="box-product-detail">
                       <h3 className="name-product-detail">{item.title}</h3>
                       <ul className="img-product-detail">
-                        {newList.map((item, index) => {
+                        {item.images.map((itemPic, index) => {
                           return (
                             <li key={index}>
-                              <img src={item.image} alt="small-ao-phong" />
+                              <img src={itemPic} alt="small-ao-phong" />
                             </li>
                           )
                         })}
@@ -38,7 +43,7 @@ const Body = ({ ...props }) => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             )
           })}
         </div>
