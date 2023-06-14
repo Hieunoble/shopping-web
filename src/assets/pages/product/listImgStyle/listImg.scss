@@ -1,0 +1,21 @@
+.product-list-img {
+  width: 9%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  padding-bottom: 1px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 65px;
+
+  div {
+    line-height: 0;
+    margin-bottom: 10px;
+    border: 1px solid #f7f7f8;
+    width: 100%;
+  }
+
+  img {
+    background-color: #f3f3f3;
+    display: block;
+  }
+}

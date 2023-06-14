@@ -5,8 +5,8 @@ import Footer from '../footer/Footer'
 const ItemInfo = () => {
   return (
     <div>
-      {/* <Header /> */}
-      <Footer />
+      {/* <Header />
+      <Footer /> */}
     </div>
   )
 }

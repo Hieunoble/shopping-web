@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router'
 import { Link } from 'react-router-dom'
 import './BodyStyle.scss'
-import Products from '../product/Item'
+import Products from '../../../pages/product/Item'
 
 const Body = ({ ...props }) => {
 
@@ -19,6 +19,7 @@ const Body = ({ ...props }) => {
                 to={"/san-pham"
                   // + item.category.name
                 }
+                state={item}
                 className="col-md-5"
               >
                 <div className="product-block">
@@ -48,7 +49,7 @@ const Body = ({ ...props }) => {
           })}
         </div>
       </div>
-    </div>
+    </div >
   )
 }
 

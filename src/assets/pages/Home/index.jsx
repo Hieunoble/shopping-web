@@ -14,29 +14,14 @@ import axios from 'axios'
 // import Cart from './header-icons/Cart'
 // import Users from './header-icons/Users'
 
-const Home = () => {
-
-  const [productList, setProductList] = useState([])
-
-  useEffect(() => {
-    axios.get('https://api.escuelajs.co/api/v1/products')
-      .then((storeData) => {
-        const arrayStore = [...storeData.data]
-        // console.log(arrayStore);
-        setProductList(arrayStore)
-        return storeData
-      })
-      .catch((error) => {
-        console.log('Error: ', error)
-      })
-  }, [])
+const Home = ({ ...props }) => {
 
   return (
     <div className='main-home'>
       <HeadingHome />
       <NewCollection />
       <Body
-        productList={productList} 
+        productList={props.productList}
       />
     </div>
   )

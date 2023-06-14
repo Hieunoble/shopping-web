@@ -1,0 +1,24 @@
+.row-product-detail {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+div[class*="product-content"] { 
+  padding: 0 15px;
+}
+
+.product-content-img {
+  position: sticky;
+  top: 70px;
+  width: 58.33333333%;
+  float: left;
+}
+
+.product-gallery {
+  display: flex;
+}
+
+.product-content-desc {
+  width: 41.66666667%;
+  float: left;
+}

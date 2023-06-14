@@ -13,7 +13,6 @@ function App() {
     axios.get('https://api.escuelajs.co/api/v1/products')
       .then((storeData) => {
         const arrayStore = [...storeData.data]
-        // console.log(arrayStore);
         setProductList(arrayStore)
         return storeData
       })
@@ -42,7 +41,9 @@ function App() {
               path={route.path}
               element={
                 <Layout>
-                  <Page />
+                  <Page
+                    productList={productList}
+                  />
                 </Layout>
               }
             />)

@@ -8,8 +8,8 @@ import Items from '../pages/item/Items.jsx';
 import Policies from '../pages/policies/Policies.jsx';
 import Products from '../pages/products/Products.jsx'
 import SaleUp from '../pages/saleup/SaleUp.jsx';
-import Item from '../components/Layout/product/Item.jsx';
-
+import Item from '../pages/product/Item.jsx';
+ 
 const privateRoutes = [];
 
 const publicRoutes = [
