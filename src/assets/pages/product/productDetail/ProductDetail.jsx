@@ -1,7 +1,9 @@
 import React from 'react'
-import './ProductFormStyle.scss'
+import './ProductDetailStyle.scss'
+//size button background need to be checked
 
-const ProductForm = () => {
+const ProductDetail = ({ ...props }) => {
+  console.log(props.sizeColor);
   return (
     <div>
       <form className="add-item-form">
@@ -10,23 +12,38 @@ const ProductForm = () => {
 
           <div className="check-size">
             <div className="select-size">
-              <div className="size">
+              <div
+                className="size"
+                onClick={props.handleChangeSizeColor}
+              >
                 <input id='size-m' type="radio" value="M" />
-                <label htmlFor="size-m">
+                <label
+                  style={{ background: props.sizeColor }}
+                  htmlFor="size-m">
                   <span>M</span>
                 </label>
               </div>
 
-              <div className="size">
-                <input id='size-m' type="radio" value="M" />
-                <label htmlFor="size-m">
+              <div
+                onClick={props.handleChangeSizeColor}
+                className="size"
+              >
+                <input id='size-l' type="radio" value="L" />
+                <label
+                  style={{ background: props.sizeColor }}
+                  htmlFor="size-l">
                   <span>L</span>
                 </label>
               </div>
 
-              <div className="size">
-                <input id='size-m' type="radio" value="M" />
-                <label htmlFor="size-m">
+              <div
+                onClick={props.handleChangeSizeColor}
+                className="size"
+              >
+                <input id='size-xl' type="radio" value="XL" />
+                <label
+                  style={{ background: props.sizeColor }}
+                  htmlFor="size-xl">
                   <span>XL</span>
                 </label>
               </div>
@@ -56,9 +73,9 @@ const ProductForm = () => {
         <div className="selector-action">
 
           <div className="quantity">
-            <input type="button" className="quantity-btn" value="-" />
-            <input type="text" className="quantity-selector" value="1" min="1" />
-            <input type="button" className="quantity-btn" value="+" />
+            <input type="button" className="quantity-btn" defaultValue="-" />
+            <input type="text" className="quantity-selector" defaultValue="1" min="1" />
+            <input type="button" className="quantity-btn" defaultValue="+" />
           </div>
 
           <div className="wrap-addcart">
@@ -66,9 +83,9 @@ const ProductForm = () => {
           </div>
 
         </div>
-      </form>
-    </div>
+      </form >
+    </div >
   )
 }
 
-export default ProductForm
+export default ProductDetail

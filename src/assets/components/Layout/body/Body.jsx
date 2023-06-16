@@ -2,7 +2,7 @@ import React from 'react'
 import { Route } from 'react-router'
 import { Link } from 'react-router-dom'
 import './BodyStyle.scss'
-import Products from '../../../pages/product/Item'
+import Products from '../../../pages/product/ProductForm'
 
 const Body = ({ ...props }) => {
 

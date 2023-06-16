@@ -70,15 +70,16 @@ div[class*="check-"] {
   }
 
   label {
-    border: 1px solid #000;
-    background: #000;
-    color: #fff;
+    left: 0;
+    margin: 0;
     max-width: 100%;
     display: block;
-    margin: 0;
     width: 40px;
     height: 40px;
     line-height: 40px;
+    border: 1px solid #000;
+    background: #ee4c4c;
+    color: #fff;
     position: relative;
     // border: 1px solid #e5e5e5;
     font-size: 12px;
@@ -161,6 +162,17 @@ div[class*="check-"] {
   .quantity {
     margin-bottom: 15px;
   }
+
+  .quantity::before {
+    display: table;
+    content: " ";
+  }
+
+  .quantity::after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
 }
 
 input.quantity-btn {
@@ -190,4 +202,19 @@ input.quantity-selector {
   border-radius: 1px;
   float: left;
   // -webkit-appearance: none;
+}
+
+.wrap-addcart {
+
+  // float: left;
+  //   margin-right: 5px;
+  button {
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: none;
+    padding: 14px 35px;
+    line-height: 22px;
+    width: 100%;
+  }
 }
