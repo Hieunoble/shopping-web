@@ -13,7 +13,7 @@ import Item from '../pages/product/ProductForm.jsx';
 const privateRoutes = [];
 
 const publicRoutes = [
-  { path: '/', component: Home },
+  { path: '', component: Home },
   { path: 'all-products', component: Products },
   { path: 'buy1Get1', component: Buy1Get1 },
   { path: 'saleUp', component: SaleUp },

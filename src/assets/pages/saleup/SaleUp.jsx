@@ -2,10 +2,14 @@ import React from 'react'
 import { RiArrowDropDownLine } from 'react-icons/ri'
 
 
-const SaleUp = () => {
+const SaleUp = ({...props}) => {
   return (
     <div>
-      sale up
+      <HeadingHome />
+      <NewCollection />
+      <Body
+        productList={props.productList}
+      />
     </div>
   )
 }

@@ -21,6 +21,12 @@ function App() {
       })
   }, [])
 
+  // publicRoutes.map((route) => {
+  //   productList.map((product) => {
+  //     console.log(route.path + '/' + product.title);
+  //     return route.path + '/' + product.title
+  //   })
+  // })
 
   return (
     <div className='App'>
@@ -38,7 +44,13 @@ function App() {
           return (
             <Route
               key={index}
-              path={route.path}
+              path={
+                route.path
+                // productList.map((product) => {
+                //   return route.path + '/' + ':' + product.title
+                // })
+              }
+
               element={
                 <Layout>
                   <Page

@@ -9,15 +9,45 @@ import ProductDetail from './productDetail/ProductDetail'
 import ProductDescription from './productDescription/ProductDescription'
 
 const Item = ({ ...props }) => {
+
+  //initial size button
+  const [sizeBtn, setSizeBtn] = useState({
+    activeObject: null,
+    objects:
+      [
+        {
+          id: 'size-s',
+          type: 'radio',
+          value: 'S'
+        },
+        {
+          id: 'size-m',
+          type: 'radio',
+          value: 'M'
+        },
+        {
+          id: 'size-l',
+          type: 'radio',
+          value: 'L'
+        },
+        {
+          id: 'size-xl',
+          type: 'radio',
+          value: 'XL'
+        }
+      ]
+  }
+
+  )
+
+  //state of Link
   const location = useLocation()
   const propsData = location.state
 
+  //Change Image when click
   const [imgUrl, setImgUrl] = useState('')
   const imgUrls = propsData.images
   const currentUrl = propsData.category.image
-
-  const [sizeColor, setSizeColor] = useState('')
-  const [active, setActive] = useState(false)
 
   const handleChangeImg = (e) => {
     const listUrl = e.target.src
@@ -26,14 +56,35 @@ const Item = ({ ...props }) => {
     })
     setImgUrl(newUrl)
   }
-
   const handleShowCurrentImg = () => {
     setImgUrl(currentUrl)
   }
 
-  const handleChangeSizeColor = () => {
-    setSizeColor('#000')
-    setActive(!active)
+// Change size
+  const handleActiveSizeBtn = (index) => {
+    setSizeBtn({ ...sizeBtn, activeObject: sizeBtn.objects[index] })
+  }
+  
+  const handleChangeSizeColor = (index) => {
+    if (sizeBtn.objects[index] === sizeBtn.activeObject) {
+      return 'active'
+    } else {
+      return ''
+    }
+  }
+  
+  //Change quantity
+  const countQuantity = useRef(1)
+  const handleAddItem = () => {
+    +countQuantity.current.value++;
+  }
+
+  const handleReduceItem = () => {
+    if (+countQuantity.current.value > 1) {
+      +countQuantity.current.value--;
+    } else {
+      return
+    }
   }
 
   return (
@@ -65,9 +116,12 @@ const Item = ({ ...props }) => {
                   <span>$ {propsData.price}</span>
                 </div>
                 <ProductDetail
-                  handleChangeSizeColor={handleChangeSizeColor}
-                  sizeColor={sizeColor}
-                  active={active}
+                  sizeBtn={sizeBtn}
+                  handleActiveSizeBtn={(index) => handleActiveSizeBtn(index)}
+                  handleChangeSizeColor={(index) => handleChangeSizeColor(index)}
+                  countQuantity={countQuantity}
+                  handleAddItem={handleAddItem}
+                  handleReduceItem={handleReduceItem}
                 />
                 <div className="product-description">
                   <ProductDescription

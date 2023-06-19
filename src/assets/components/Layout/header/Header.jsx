@@ -16,9 +16,7 @@ const Header = (children) => {
   const [openSubmenu, setOpenSubmenu] = useState(false)
 
   const handleOpenSubMenu = () => {
-    let a = 0
     setOpenSubmenu(!openSubmenu)
-    console.log(a++);
   }
 
 

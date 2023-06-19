@@ -16,9 +16,7 @@ const Body = ({ ...props }) => {
             return (
               <Link
                 key={index}
-                to={"/san-pham"
-                  // + item.category.name
-                }
+                to={`/san-pham`}
                 state={item}
                 className="col-md-5"
               >

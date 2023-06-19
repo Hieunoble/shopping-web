@@ -1,13 +1,14 @@
 import React from 'react'
-import { RiArrowDropDownLine } from 'react-icons/ri'
 import { Link, Outlet } from 'react-router-dom'
+import { RiArrowDropDownLine } from 'react-icons/ri'
 import './HeaderStyle.scss'
 
 
 const Products = ({ ...props }) => {
 
   return (
-    <div
+    <Link
+      to={'/all-products'}
       className="menu"
       onMouseMove={props.handleopenSubMenu}
     >
@@ -33,7 +34,7 @@ const Products = ({ ...props }) => {
         )
       }
       <Outlet />
-    </div>
+    </Link>
   )
 }
 

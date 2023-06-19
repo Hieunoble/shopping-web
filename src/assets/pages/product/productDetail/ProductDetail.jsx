@@ -3,7 +3,6 @@ import './ProductDetailStyle.scss'
 //size button background need to be checked
 
 const ProductDetail = ({ ...props }) => {
-  console.log(props.sizeColor);
   return (
     <div>
       <form className="add-item-form">
@@ -12,41 +11,22 @@ const ProductDetail = ({ ...props }) => {
 
           <div className="check-size">
             <div className="select-size">
-              <div
-                className="size"
-                onClick={props.handleChangeSizeColor}
-              >
-                <input id='size-m' type="radio" value="M" />
-                <label
-                  style={{ background: props.sizeColor }}
-                  htmlFor="size-m">
-                  <span>M</span>
-                </label>
-              </div>
-
-              <div
-                onClick={props.handleChangeSizeColor}
-                className="size"
-              >
-                <input id='size-l' type="radio" value="L" />
-                <label
-                  style={{ background: props.sizeColor }}
-                  htmlFor="size-l">
-                  <span>L</span>
-                </label>
-              </div>
-
-              <div
-                onClick={props.handleChangeSizeColor}
-                className="size"
-              >
-                <input id='size-xl' type="radio" value="XL" />
-                <label
-                  style={{ background: props.sizeColor }}
-                  htmlFor="size-xl">
-                  <span>XL</span>
-                </label>
-              </div>
+              {
+                props.sizeBtn.objects.map((size, index) => (
+                  <div
+                    key={index}
+                    onClick={() => props.handleActiveSizeBtn(index)}
+                    className={`size ${size.id} ` + props.handleChangeSizeColor(index)}
+                  >
+                    <input id={size.id} type={size.type} value={size.value} />
+                    <label
+                      htmlFor={size.id}
+                    >
+                      <span>{size.value}</span>
+                    </label>
+                  </div>
+                ))
+              }
             </div>
           </div>
 
@@ -73,9 +53,9 @@ const ProductDetail = ({ ...props }) => {
         <div className="selector-action">
 
           <div className="quantity">
-            <input type="button" className="quantity-btn" defaultValue="-" />
-            <input type="text" className="quantity-selector" defaultValue="1" min="1" />
-            <input type="button" className="quantity-btn" defaultValue="+" />
+            <input onClick={props.handleReduceItem} type="button" className="quantity-btn" defaultValue="-" />
+            <input ref={props.countQuantity} type="text" className="quantity-selector" defaultValue='1' min="1" />
+            <input onClick={props.handleAddItem} type="button" className="quantity-btn" defaultValue="+" />
           </div>
 
           <div className="wrap-addcart">
