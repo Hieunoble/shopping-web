@@ -60,11 +60,11 @@ const Item = ({ ...props }) => {
     setImgUrl(currentUrl)
   }
 
-// Change size
+  // Change size
   const handleActiveSizeBtn = (index) => {
     setSizeBtn({ ...sizeBtn, activeObject: sizeBtn.objects[index] })
   }
-  
+
   const handleChangeSizeColor = (index) => {
     if (sizeBtn.objects[index] === sizeBtn.activeObject) {
       return 'active'
@@ -72,7 +72,7 @@ const Item = ({ ...props }) => {
       return ''
     }
   }
-  
+
   //Change quantity
   const countQuantity = useRef(1)
   const handleAddItem = () => {
@@ -86,6 +86,17 @@ const Item = ({ ...props }) => {
       return
     }
   }
+
+  //Add Item to cart
+  const [openCart, setOpenCart] = useState(false)
+
+  const addToCart = (e) => {
+    e.preventDefault()
+    setOpenCart(!openCart)
+    console.log('123');
+  }
+
+
 
   return (
     <div className='product-wrapper'>
@@ -122,6 +133,8 @@ const Item = ({ ...props }) => {
                   countQuantity={countQuantity}
                   handleAddItem={handleAddItem}
                   handleReduceItem={handleReduceItem}
+                  addToCart={(e) => addToCart(e)}
+                  openCart={openCart}
                 />
                 <div className="product-description">
                   <ProductDescription

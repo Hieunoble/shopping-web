@@ -1,11 +1,17 @@
 import React from 'react'
-import { RiArrowDropDownLine } from 'react-icons/ri'
+import HeadingHome from '../../components/Layout/headingHome/HeadingHome'
+import NewCollection from '../../components/Layout/newCollection/NewCollection'
+import Body from '../../components/Layout/body/Body'
 // import HeaderMenuStyles from './HeaderMenuStyles.css'
 
-const Products = () => {
+const Products = ({ ...props }) => {
   return (
     <div>
-    All products
+      <HeadingHome />
+      <NewCollection />
+      <Body
+        productList={props.productList}
+      />
     </div>
   )
 }

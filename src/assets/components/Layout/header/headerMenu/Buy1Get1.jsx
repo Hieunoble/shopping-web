@@ -5,13 +5,16 @@ import HeaderStyle from './HeaderStyle.scss'
 
 const Buy1Get1 = () => {
   return (
-    <Link to={'./buy1Get1'} className='menu'>
+    <div className='menu'>
       <div className='menu-item'>
-        <a href="">Buy 1 Get 1</a>
+        <Link
+          to={'/buy1Get1'}
+        >Buy 1 Get 1
+        </Link>
         {/* <RiArrowDropDownLine className='dropIcon' />
          */}
       </div>
-    </Link>
+    </div>
   )
 }
 

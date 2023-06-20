@@ -7,10 +7,10 @@ const Address = () => {
   return (
     <div className="menu">
       <div className="menu-item menu-dropdown">
-        <a href="">
+        <Link to={"/address"}>
           Address
           <RiArrowDropDownLine className='dropIcon' />
-        </a>
+        </Link>
       </div>
       <ul className='sub_menu isActive'>
         <li><Link to={'all-products'}>Hanoi</Link></li>

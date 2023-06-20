@@ -5,7 +5,7 @@ import './ProductDetailStyle.scss'
 const ProductDetail = ({ ...props }) => {
   return (
     <div>
-      <form className="add-item-form">
+      <form method='POST' className="add-item-form">
 
         <div className="select-swatch">
 
@@ -59,7 +59,9 @@ const ProductDetail = ({ ...props }) => {
           </div>
 
           <div className="wrap-addcart">
-            <button>Add to cart</button>
+            <button
+              onClick={props.addToCart}
+            >Add to cart</button>
           </div>
 
         </div>

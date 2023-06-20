@@ -7,18 +7,18 @@ import './HeaderStyle.scss'
 const Products = ({ ...props }) => {
 
   return (
-    <Link
-      to={'/all-products'}
+    <div
       className="menu"
       onMouseMove={props.handleopenSubMenu}
     >
       <div
         className="menu-item menu-dropdown" >
-        <a href=""
+        <Link
+          to={'/all-products'}
         >
           Products
           <RiArrowDropDownLine className='dropIcon' />
-        </a>
+        </Link>
       </div>
       {
         props.openSubmenu &&
@@ -34,7 +34,7 @@ const Products = ({ ...props }) => {
         )
       }
       <Outlet />
-    </Link>
+    </div>
   )
 }
 

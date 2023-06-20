@@ -7,7 +7,7 @@ import Policies from './headerMenu/Policies'
 import Search from './header-icons/search/Search'
 import Users from './header-icons/user/Users'
 import Cart from './header-icons/cart/Cart.jsx'
-import HeadingMenu from './layoutMenu/HeadingMenu'
+// import HeadingMenu from './layoutMenu/HeadingMenu'
 import "../header/HeaderStyle.scss"
 import { Link } from 'react-router-dom'
 
