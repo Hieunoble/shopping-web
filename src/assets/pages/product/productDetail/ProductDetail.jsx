@@ -16,7 +16,7 @@ const ProductDetail = ({ ...props }) => {
                   <div
                     key={index}
                     onClick={() => props.handleActiveSizeBtn(index)}
-                    className={`size ${size.id} ` + props.handleChangeSizeColor(index)}
+                    className={`size ${size.id} ` + props.handleChangeSizeColor}
                   >
                     <input id={size.id} type={size.type} value={size.value} />
                     <label

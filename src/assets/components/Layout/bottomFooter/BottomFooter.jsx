@@ -1,5 +1,5 @@
 import React from 'react'
-import BottomFooterStyle from './BottomFooterStyle.scss'
+import './BottomFooterStyle.scss'
 
 const BottomFooter = () => {
   return (

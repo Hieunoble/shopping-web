@@ -1,5 +1,5 @@
 import React from 'react'
-import FooterStyle from './FooterStyle.scss'
+import './FooterStyle.scss'
 import { BsFillTelephoneFill } from 'react-icons/bs'
 import { GrFacebook, GrInstagram, GrYoutube } from 'react-icons/gr'
 

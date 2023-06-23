@@ -1,5 +1,5 @@
 import React from 'react'
-import SearchItemStyle from './SearchItemStyle.scss'
+import './SearchItemStyle.scss'
 
 const SearchItem = () => {
   return (

@@ -2,8 +2,8 @@ import React from 'react'
 import { BsBag } from 'react-icons/bs'
 import { VscTriangleUp } from 'react-icons/vsc'
 import { BsCart } from 'react-icons/bs'
-import CartStyle from './CartStyle.scss'
-import HeaderIconStyles from '../HeaderIconStyles.scss'
+import './CartStyle.scss'
+import '../HeaderIconStyles.scss'
 
 const Cart = () => {
   return (

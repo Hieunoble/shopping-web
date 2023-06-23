@@ -60,7 +60,7 @@ const Item = ({ ...props }) => {
     setImgUrl(currentUrl)
   }
 
-  // Change size
+  // Change size when Click 
   const handleActiveSizeBtn = (index) => {
     setSizeBtn({ ...sizeBtn, activeObject: sizeBtn.objects[index] })
   }

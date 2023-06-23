@@ -4,8 +4,8 @@ import { VscTriangleUp } from 'react-icons/vsc'
 import Tippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '../popper/index.js'
 
-import HeaderIconStyles from '../HeaderIconStyles.scss'
-import SearchDrop from './SearchDrop.scss'
+import '../HeaderIconStyles.scss'
+import './SearchDrop.scss'
 import SearchItem from '../searchItem/SearchItem.jsx';
 
 

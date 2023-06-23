@@ -1,5 +1,5 @@
 import React from 'react'
-import WrapperStyle from './WrapperStyle.scss'
+import './WrapperStyle.scss'
 
 const Wrapper = ({ children }) => {
   return (

@@ -23,5 +23,110 @@ const publicRoutes = [
   { path: 'san-pham', component: Item, layout: ItemInfo },
 ];
 
+const headingRoutes =
+{
+  activeMenu: null,
+  objects: [
+    {
+      title: 'Products',
+      path: '/all-products',
+      subMenu: [
+        {
+          id: 0,
+          title: 'Shirts'
+        },
+        {
+          id: 1,
+          title: 'Sets'
+        },
+        {
+          id: 2,
+          title: 'Bags'
+        },
+        {
+          id: 3,
+          title: 'Shoes'
+        },
+        {
+          id: 4,
+          title: 'Others'
+        },
+      ]
+    },
+    {
+      title: 'Buy 1 get 1',
+      path: '/buy1Get1',
+      subMenu: null
+    },
+    {
+      title: 'Sale Up',
+      path: '/saleUp',
+      subMenu: [
+        {
+          id: 0,
+          title: 'Summer Product'
+        },
+        {
+          id: 1,
+          title: '75%'
+        },
+        {
+          id: 2,
+          title: '50%'
+        },
+        {
+          id: 3,
+          title: '30%'
+        },
+        {
+          id: 4,
+          title: 'sales off'
+        },
+      ]
+    },
+    {
+      title: 'Adress',
+      path: '/address',
+      subMenu: [
+        {
+          id: 0,
+          title: 'Hanoi'
+        },
+        {
+          id: 1,
+          title: 'Bac Ninh'
+        },
+        {
+          id: 2,
+          title: 'Thanh Hoa'
+        },
+        {
+          id: 3,
+          title: 'Nam Dinh'
+        },
+      ]
+    },
+    {
+      title: 'Policy',
+      path: '/policies',
+      subMenu: [
+        {
+          id: 0,
+          title: 'Exchange and return'
+        },
+        {
+          id: 1,
+          title: 'Refund'
+        },
+        {
+          id: 2,
+          title: 'Membership'
+        },
+      ]
+    },
+  ]
 
-export { publicRoutes, privateRoutes }
+}
+
+
+export { publicRoutes, privateRoutes, headingRoutes }

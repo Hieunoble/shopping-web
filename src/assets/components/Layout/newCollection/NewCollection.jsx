@@ -1,5 +1,5 @@
 import React from 'react'
-import NewCollectionStyle from './NewCollectionStyle.scss'
+import './NewCollectionStyle.scss'
 
 const NewCollection = () => {
   return (

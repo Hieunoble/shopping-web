@@ -1,24 +1,33 @@
 import React, { useState } from 'react'
-import Products from './headerMenu/Products'
-import Buy1Get1 from './headerMenu/Buy1Get1'
-import SaleUp from './headerMenu/SaleUp'
-import Address from './headerMenu/Address'
-import Policies from './headerMenu/Policies'
+import { Link } from 'react-router-dom'
+// import Products from './headerMenu/Products'
+
 import Search from './header-icons/search/Search'
 import Users from './header-icons/user/Users'
 import Cart from './header-icons/cart/Cart.jsx'
+import MenuTest from './headerMenu/MenuTest'
 // import HeadingMenu from './layoutMenu/HeadingMenu'
 import "../header/HeaderStyle.scss"
-import { Link } from 'react-router-dom'
+import { headingRoutes } from '../../../route'
 
-const Header = (children) => {
+const Header = ({ ...props }) => {
+  const [menu, setMenu] = useState(headingRoutes)
 
-  const [openSubmenu, setOpenSubmenu] = useState(false)
-
-  const handleOpenSubMenu = () => {
-    setOpenSubmenu(!openSubmenu)
+  const activeOpenSubMenu = (index) => {
+    setMenu({ ...menu, activeMenu: menu.objects[index] })
   }
 
+  const handleOpenSubMenu = (index) => {
+    if (menu.objects[index] === menu.activeMenu) {
+      return 'active'
+    } else if (menu.objects[index] !== menu.activeMenu || !menu.objects[index]) {
+      return ''
+    }
+  }
+
+  const handleCloseSubMenu = (index) => {
+    setMenu({ ...menu, activeMenu: null })
+  }
 
   return (
     <div className='main-header'>
@@ -31,27 +40,14 @@ const Header = (children) => {
             <Link to='/' className=" header-detail header-logo">
               <img src="https://file.hstatic.net/200000201725/file/logo300x70_edf9c9c72acb48f791fe052257311c5c.png" alt="" />
             </Link>
-            <Products
-              openSubmenu={openSubmenu}
-              setOpenSubmenu={setOpenSubmenu}
+
+            <MenuTest
+              headingRoutes={headingRoutes}
+              activeOpenSubMenu={(e, index) => activeOpenSubMenu(e, index)}
               handleOpenSubMenu={handleOpenSubMenu}
+              handleCloseSubMenu={handleCloseSubMenu}
             />
-            <Buy1Get1
-              openSubmenu={openSubmenu}
-              setOpenSubmenu={setOpenSubmenu}
-              handleOpenSubMenu={handleOpenSubMenu} />
-            <SaleUp
-              openSubmenu={openSubmenu}
-              setOpenSubmenu={setOpenSubmenu}
-              handleOpenSubMenu={handleOpenSubMenu} />
-            <Address
-              openSubmenu={openSubmenu}
-              setOpenSubmenu={setOpenSubmenu}
-              handleOpenSubMenu={handleOpenSubMenu} />
-            <Policies
-              openSubmenu={openSubmenu}
-              setOpenSubmenu={setOpenSubmenu}
-              handleOpenSubMenu={handleOpenSubMenu} />
+
             <div className="header-detail header-icon">
               <Search />
               <Users />

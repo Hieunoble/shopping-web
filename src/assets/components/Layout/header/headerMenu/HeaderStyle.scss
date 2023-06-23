@@ -3,17 +3,25 @@
   --main-font-size: 17px
 }
 
+.menu-wrapper {
+  display: flex;
+  width: 100%;
+  text-align: center;
+}
+
 .menu {
   display: inline-block;
   height: 100%;
+  width: inherit;
   position: relative;
   z-index: 10;
+  vertical-align: middle;
 }
 
 .menu-item {
-  height: 100%;
-  /* transform: translateY(0px); */
   align-items: center;
+  height: 100%;
+  transform: translateY(0px);
   display: flex;
 }
 
@@ -42,23 +50,42 @@
 
 .sub_menu {
   display: block;
-  display: none;
+  opacity: 1;
   animation: openSubMenu ease-in-out .2s;
   list-style-type: none;
-
-  @keyframes openSubMenu {
-    from {
-      opacity: 0;
-      transform: translateY(-5px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
 }
 
+ul.sub_menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  animation: openSubMenu ease-in-out .5s;
+  transition:
+    visibility 0.5s linear,
+    opacity 0.3s linear;
+
+}
+
+ul.sub_menu.active {
+  visibility: visible;
+  opacity: 1;
+  list-style-type: none;
+  transition-delay: .1s;
+}
+
+
+@keyframes openSubMenu {
+  from {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  to {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 
 
 .sub_menu {

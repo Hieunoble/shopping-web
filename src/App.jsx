@@ -21,12 +21,6 @@ function App() {
       })
   }, [])
 
-  // publicRoutes.map((route) => {
-  //   productList.map((product) => {
-  //     console.log(route.path + '/' + product.title);
-  //     return route.path + '/' + product.title
-  //   })
-  // })
 
   return (
     <div className='App'>

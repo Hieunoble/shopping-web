@@ -12,7 +12,7 @@ const Body = ({ ...props }) => {
     <div className="body-wrapper">
       <div className="collection-wrapper">
         <div className="row">
-          {newList.map((item, index) => {
+          {newList?.map((item, index) => {
             return (
               <Link
                 key={index}

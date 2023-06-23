@@ -1,5 +1,5 @@
 import React from 'react'
-import BannerStyle from './BannerStyle.scss'
+import './BannerStyle.scss'
 
 const Banner = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import HeadingHomeStyle from './HeadingHomeStyle.scss'
+import './HeadingHomeStyle.scss'
 import { MdKeyboardDoubleArrowRight } from 'react-icons/md'
 
 const HeadingHome = () => {
