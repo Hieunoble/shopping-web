@@ -1,16 +1,25 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { FaUserCircle } from 'react-icons/fa'
 import { VscTriangleUp } from 'react-icons/vsc'
 import '../HeaderIconStyles.scss'
 import './UserDrop.scss'
 
-const Users = () => {
+const Users = ({ ...props }) => {
+
+  const [isFocus, setIsFocus] = useState(false)
+  const focus = useRef()
+  const handleFocusinput = () => {
+    setIsFocus(!isFocus)
+    console.log(focus.current);
+  }
+
   return (
     <div>
       <div className="headerIcon">
         <div className='icon-action'>
           <FaUserCircle className='headerLeftIcon' />
         </div>
+
         <div className="icon-dropdown user">
           <div className='dropdown-arrow'>
             <VscTriangleUp className='arrow' />
@@ -24,11 +33,11 @@ const Users = () => {
               <div className="login-account">
                 <form action="">
                   <div className="form-input-wrapper">
-                    <input type="email" id='login-email' />
+                    <input onClick={handleFocusinput} ref={focus} type="email" id='login-email' />
                     <label htmlFor="login-email">Email</label>
                   </div>
                   <div className="form-input-wrapper">
-                    <input type="password" id='login-password' />
+                    <input onClick={handleFocusinput} ref={focus} type="password" id='login-password' />
                     <label htmlFor="login-password">Password</label>
                     <div className="sitebox-recaptcha">
                       This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy">Privacy and Policy </a>

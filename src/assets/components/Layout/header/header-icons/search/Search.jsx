@@ -8,27 +8,25 @@ import '../HeaderIconStyles.scss'
 import './SearchDrop.scss'
 import SearchItem from '../searchItem/SearchItem.jsx';
 
+const Search = ({ ...props }) => {
 
-
-const Search = () => {
-  // const [visible, setVisible] = useState(true);
-  // const show = () => setVisible(true);
-  // const hide = () => setVisible(false);
   const [searchResult, setSearchResult] = useState([])
 
-  useEffect(() => {
-    setTimeout(() => {
-      setSearchResult(['ao phong', ' quan dai'])
-    }, 0)
-  }, [])
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setSearchResult(['ao phong', ' quan dai'])
+  //   }, 0)
+  // }, [])
 
   return (
     <div>
       <div className="headerIcon">
-        <div className='icon-action'>
+        <div
+          className='icon-action'
+          onClick={props.handleOpenIconAction}
+        >
           <FiSearch className='search headerLeftIcon' />
         </div>
-
         <div className="icon-dropdown search">
           <div className='dropdown-arrow'>
             <VscTriangleUp className='arrow' />
@@ -50,11 +48,11 @@ const Search = () => {
                   <div
                     className='search-result' tabIndex="-1" {...attrs}
                   >
-                    <PopperWrapper>
+                    {/* <PopperWrapper>
                       <div className="item-wrapper">
                         <SearchItem />
                       </div>
-                    </PopperWrapper>
+                    </PopperWrapper> */}
                   </div>
                 )}
               >
@@ -69,6 +67,7 @@ const Search = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   )

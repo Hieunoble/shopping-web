@@ -1,22 +1,18 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-// import Products from './headerMenu/Products'
-
-import Search from './header-icons/search/Search'
-import Users from './header-icons/user/Users'
-import Cart from './header-icons/cart/Cart.jsx'
-import MenuTest from './headerMenu/MenuTest'
-// import HeadingMenu from './layoutMenu/HeadingMenu'
+import { headingRoutes, iconRoutes } from '../../../route'
+import Menu from './headerMenu/Menu.jsx'
 import "../header/HeaderStyle.scss"
-import { headingRoutes } from '../../../route'
+import IconTest from './header-icons/IconTest'
 
 const Header = ({ ...props }) => {
   const [menu, setMenu] = useState(headingRoutes)
+  const [iconMenu, setIconMenu] = useState(iconRoutes)
 
+  //Menu Action handlers
   const activeOpenSubMenu = (index) => {
     setMenu({ ...menu, activeMenu: menu.objects[index] })
   }
-
   const handleOpenSubMenu = (index) => {
     if (menu.objects[index] === menu.activeMenu) {
       return 'active'
@@ -24,9 +20,26 @@ const Header = ({ ...props }) => {
       return ''
     }
   }
-
-  const handleCloseSubMenu = (index) => {
+  const handleCloseSubMenu = () => {
     setMenu({ ...menu, activeMenu: null })
+  }
+
+  // Icon Action handlers
+  const activeIconMenu = (index) => {
+    setIconMenu({ ...iconMenu, activeIcon: iconMenu.objects[index] })
+  }
+  const handleOpenIconAction = (index) => {
+    if (iconMenu.objects[index] === iconMenu.activeIcon) {
+      return 'active'
+    } else {
+      return ''
+    }
+  }
+  const handleCloseIconAction = (index) => {
+    if (iconMenu.objects[index] === iconMenu.activeIcon) {
+      setIconMenu({ ...iconMenu, activeIcon: null })
+      console.log(iconMenu);
+    }
   }
 
   return (
@@ -41,7 +54,7 @@ const Header = ({ ...props }) => {
               <img src="https://file.hstatic.net/200000201725/file/logo300x70_edf9c9c72acb48f791fe052257311c5c.png" alt="" />
             </Link>
 
-            <MenuTest
+            <Menu
               headingRoutes={headingRoutes}
               activeOpenSubMenu={(e, index) => activeOpenSubMenu(e, index)}
               handleOpenSubMenu={handleOpenSubMenu}
@@ -49,9 +62,12 @@ const Header = ({ ...props }) => {
             />
 
             <div className="header-detail header-icon">
-              <Search />
-              <Users />
-              <Cart />
+              <IconTest
+                iconRoutes={iconRoutes}
+                activeIconMenu={(index) => activeIconMenu(index)}
+                handleOpenIconAction={(index) => handleOpenIconAction(index)}
+                handleCloseIconAction={(index) => handleCloseIconAction(index)}
+              />
             </div>
           </div>
         </div>

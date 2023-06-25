@@ -11,7 +11,13 @@ $font-size: 12px;
   min-width: 280px;
   visibility: visible;
   opacity: 1;
-  transition: opacity 0.4s cubic-bezier(0, 1, 0.4, 1), transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1), visibility 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1);
+  transition:
+    visibility 0.5s linear,
+    opacity 0.3s linear;
+  //   opacity 0.4s cubic-bezier(0, 1, 0.4, 1),
+  //   transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1),
+  //   visibility 0.4s linear,
+  // -webkit-transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1);
   max-width: 400px;
   border-radius: 3px;
   color: #677279;
@@ -20,14 +26,15 @@ $font-size: 12px;
   z-index: 990;
 }
 
-.icon-dropdown.search:hover {
-  transform: rotate(0);
+.icon-action.active {
+  .icon-dropdown.search {
+    display: block;
+    transition-delay: .9s;
+  }
 }
 
-.dropdown-arrow {
-  position: absolute;
-  height: 100%;
-  width: 100%;
+.icon-dropdown.search:hover {
+  transform: rotate(0);
 }
 
 .dropdown-arrow {

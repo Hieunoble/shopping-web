@@ -4,7 +4,7 @@ import { RiArrowDropDownLine } from 'react-icons/ri'
 import './HeaderStyle.scss'
 
 
-const MenuTest = ({ ...props }) => {
+const Menu = ({ ...props }) => {
   const headerMenu = props.headingRoutes.objects
 
   return (
@@ -45,4 +45,4 @@ const MenuTest = ({ ...props }) => {
   )
 }
 
-export default MenuTest
+export default Menu

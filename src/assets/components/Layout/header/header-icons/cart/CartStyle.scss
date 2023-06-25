@@ -1,5 +1,5 @@
 .icon-dropdown.cart {
-   display: none;
+  display: none;
   visibility: visible;
   opacity: 1;
   transition: opacity 0.4s cubic-bezier(0, 1, 0.4, 1), transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1), visibility 0.4s linear, -webkit-transform 0.4s cubic-bezier(0.18, 1.25, 0.4, 1);
@@ -15,6 +15,13 @@
   color: #677279;
   background: #fff;
   border: solid 1px #dfe3e8;
+}
+
+.icon-action.active {
+  .icon-dropdown.cart {
+    display: block;
+    transition-delay: .9s;
+  }
 }
 
 .dropdown-arrow {
@@ -117,7 +124,7 @@ td {
   text-align: left;
 }
 
-.cartBtn { 
+.cartBtn {
   width: 100%;
   outline: none;
   padding: 0px 28px;
@@ -125,7 +132,7 @@ td {
   line-height: 42px;
 }
 
-.cartBtn a { 
+.cartBtn a {
   color: #fff;
   text-decoration: none;
   position: absolute;
@@ -135,11 +142,14 @@ td {
   bottom: 0;
 }
 
-button.cartBtn:hover {
+button.cartBtn a:hover {
   color: #0e0f0f;
-  background: transparent;
+  // background: transparent;
   border: 1px solid #e85205;
   width: 100%;
-  padding: 0px 28px;
   transition: color 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86), border 0.45s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+button.cartBtn:hover {
+  background: transparent;
 }

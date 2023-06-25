@@ -1,7 +1,7 @@
 import React from 'react'
 import './SearchItemStyle.scss'
 
-const SearchItem = () => {
+const SearchItem = ({...props}) => {
   return (
     <div className='item-wrapper'>
       <div className="item-title">

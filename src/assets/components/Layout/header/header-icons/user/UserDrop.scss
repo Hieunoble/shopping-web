@@ -17,6 +17,13 @@
   border: solid 1px #dfe3e8;
 }
 
+.icon-action.active {
+  .icon-dropdown.user {
+    display: block;
+    transition-delay: .9s;
+  }
+}
+
 .dropdown-arrow {
   position: absolute;
   height: 100%;
@@ -118,9 +125,11 @@
   transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-/* form input:focus { 
-
-} */
+// form input:focus {
+//   label {
+//     color: opacity(0);
+//   }
+// }
 
 form label {
   position: absolute;

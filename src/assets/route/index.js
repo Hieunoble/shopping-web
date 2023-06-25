@@ -9,6 +9,9 @@ import Policies from '../pages/policies/Policies.jsx';
 import Products from '../pages/products/Products.jsx'
 import SaleUp from '../pages/saleup/SaleUp.jsx';
 import Item from '../pages/product/ProductForm.jsx';
+import Search from '../components/Layout/header/header-icons/search/Search.jsx';
+import Users from '../components/Layout/header/header-icons/user/Users.jsx';
+import Cart from '../components/Layout/header/header-icons/cart/Cart.jsx';
 
 const privateRoutes = [];
 
@@ -128,5 +131,24 @@ const headingRoutes =
 
 }
 
+const iconRoutes = {
+  activeIcon: null,
+  objects:
+    [
+      {
+        id: 0,
+        Icon: Search,
+      },
+      {
+        id: 1,
+        Icon: Users,
+      },
+      {
+        id: 2,
+        Icon: Cart,
+      },
+    ]
+}
 
-export { publicRoutes, privateRoutes, headingRoutes }
+
+export { publicRoutes, privateRoutes, headingRoutes, iconRoutes }
