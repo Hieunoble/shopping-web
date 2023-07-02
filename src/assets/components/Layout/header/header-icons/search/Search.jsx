@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { VscTriangleUp } from 'react-icons/vsc'
 import Tippy from '@tippyjs/react/headless';
-import { Wrapper as PopperWrapper } from '../popper/index.js'
+import { Wrapper as PopperWrapper } from '../popper/index.js' 
 
 import '../HeaderIconStyles.scss'
 import './SearchDrop.scss'
@@ -24,6 +24,7 @@ const Search = ({ ...props }) => {
         <div
           className='icon-action'
           onClick={props.handleOpenIconAction}
+          onBlur={props.handleCloseIconAction}
         >
           <FiSearch className='search headerLeftIcon' />
         </div>

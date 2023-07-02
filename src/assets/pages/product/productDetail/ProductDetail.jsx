@@ -54,7 +54,7 @@ const ProductDetail = ({ ...props }) => {
 
           <div className="quantity">
             <input onClick={props.handleReduceItem} type="button" className="quantity-btn" defaultValue="-" />
-            <input ref={props.countQuantity} type="text" className="quantity-selector" defaultValue='1' min="1" />
+            <input ref={props.countQuantity} type="number" className="quantity-selector" defaultValue='1' min="1" />
             <input onClick={props.handleAddItem} type="button" className="quantity-btn" defaultValue="+" />
           </div>
 

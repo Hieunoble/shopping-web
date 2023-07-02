@@ -25,7 +25,9 @@ const Header = ({ ...props }) => {
   }
 
   // Icon Action handlers
+  const [isShow, setIsShow] = useState(false)
   const activeIconMenu = (index) => {
+    setIsShow(!isShow)
     setIconMenu({ ...iconMenu, activeIcon: iconMenu.objects[index] })
   }
   const handleOpenIconAction = (index) => {
@@ -38,7 +40,7 @@ const Header = ({ ...props }) => {
   const handleCloseIconAction = (index) => {
     if (iconMenu.objects[index] === iconMenu.activeIcon) {
       setIconMenu({ ...iconMenu, activeIcon: null })
-      console.log(iconMenu);
+      return ''
     }
   }
 
@@ -63,6 +65,7 @@ const Header = ({ ...props }) => {
 
             <div className="header-detail header-icon">
               <IconTest
+                isShow={isShow}
                 iconRoutes={iconRoutes}
                 activeIconMenu={(index) => activeIconMenu(index)}
                 handleOpenIconAction={(index) => handleOpenIconAction(index)}

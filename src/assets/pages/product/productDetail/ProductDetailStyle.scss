@@ -196,15 +196,21 @@ input.quantity-selector {
   background: #fff;
   font-weight: 600;
   height: 32px;
+  width: 70px;
   padding: 0;
   text-align: center;
-  width: 70px;
   border: 1px solid #f5f5f5;
   border-left: none;
   border-right: none;
   border-radius: 1px;
   float: left;
   // -webkit-appearance: none;
+}
+
+input.quantity-selector::-webkit-outer-spin-button,
+input.quantity-selector::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .wrap-addcart {
