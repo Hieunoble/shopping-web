@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { headingRoutes, iconRoutes } from '../../../route'
-import Menu from './headerMenu/Menu.jsx'
 import "../header/HeaderStyle.scss"
+import Menu from './headerMenu/Menu.jsx'
 import IconTest from './header-icons/IconTest'
+import ResponsiveIcon from './responsiveIcon/ResponsiveIcon.jsx'
+
 
 const Header = ({ ...props }) => {
   const [menu, setMenu] = useState(headingRoutes)
@@ -44,6 +46,12 @@ const Header = ({ ...props }) => {
     }
   }
 
+  //Responsive
+  const [responsiveMenu, setResponsiveMenu] = useState(false)
+  const handleOpenReponsiveMenu = () => {
+    setResponsiveMenu(!responsiveMenu)
+  }
+
   return (
     <div className='main-header'>
       <div className="topbar">
@@ -52,11 +60,21 @@ const Header = ({ ...props }) => {
       <div className="header">
         <div className="header-container">
           <div className="header-flex">
+
+            <div className='responsiveIcon'>
+              <ResponsiveIcon
+                headingRoutes={headingRoutes}
+                responsiveMenu={responsiveMenu}
+                handleOpenReponsiveMenu={handleOpenReponsiveMenu}
+              />
+            </div>
+
             <Link to='/' className=" header-detail header-logo">
               <img src="https://file.hstatic.net/200000201725/file/logo300x70_edf9c9c72acb48f791fe052257311c5c.png" alt="" />
             </Link>
 
             <Menu
+              className='menu'
               headingRoutes={headingRoutes}
               activeOpenSubMenu={(e, index) => activeOpenSubMenu(e, index)}
               handleOpenSubMenu={handleOpenSubMenu}
@@ -71,6 +89,7 @@ const Header = ({ ...props }) => {
                 handleOpenIconAction={(index) => handleOpenIconAction(index)}
                 handleCloseIconAction={(index) => handleCloseIconAction(index)}
               />
+
             </div>
           </div>
         </div>

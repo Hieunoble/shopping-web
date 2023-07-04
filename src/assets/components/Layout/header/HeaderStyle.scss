@@ -35,7 +35,7 @@
 
   .header-flex {
     display: flex;
-    height: 70px;
+    min-height: 70px;
     align-items: center;
     justify-content: space-between;
   }
@@ -68,4 +68,24 @@
     /* display: -webkit-flex; */
     justify-content: flex-end;
     /* -webkit-justify-content: flex-end; */
+  }
+
+  .responsiveIcon {
+    display: none;
+    padding-left: 2%;
+    padding-right: 15%;
+  }
+
+  @media screen and (max-width: 992px) {
+    .header-container  { 
+      padding: 0 0;
+    }
+    
+    .menu {
+      display: none;
+    }
+
+    .responsiveIcon {
+      display: block;
+    }
   }

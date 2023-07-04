@@ -1,6 +1,8 @@
 .collection-wrapper {
-  max-width: 2600px;
+  // min-width: 1200px;
+  max-width: 1900px;
   padding: 0 85px;
+  margin: auto;
 }
 
 .row {
@@ -41,6 +43,15 @@
 
 .col-md-5 {
   width: 20%;
+}
+
+//responsive
+
+//responsive
+@media screen and (max-width: 992px) {
+  .col-md-5 {
+    width: 50%;
+  }
 }
 
 .product-detail {
