@@ -3,7 +3,7 @@
   margin-left: -15px;
 }
 
-div[class*="product-content"] { 
+div[class*="product-content"] {
   padding: 0 15px;
 }
 
@@ -21,4 +21,22 @@ div[class*="product-content"] {
 .product-content-desc {
   width: 41.66666667%;
   float: left;
+}
+
+//responsive 
+
+@media screen and (max-width: 992px) {
+  .product-content-img {
+    width: 100%;
+  }
+
+  .product-list-img {
+    display: none;
+  }
+
+  .product-content-desc {
+    margin-top: 5%;
+    width: 100%;
+    // float: none;
+  }
 }

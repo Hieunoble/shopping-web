@@ -107,6 +107,7 @@ const Item = ({ ...props }) => {
               <div className="product-content-img">
                 <div className="product-gallery">
                   <ListImg
+                    className="product-list-img"
                     propsData={propsData}
                     imgUrl={imgUrl}
                     handleChangeImg={(e) => handleChangeImg(e)}

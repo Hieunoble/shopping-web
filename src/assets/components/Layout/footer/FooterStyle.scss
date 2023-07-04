@@ -21,6 +21,14 @@
   width: 16.66666667%;
 }
 
+//responsive
+@media screen and (max-width: 992px) {
+  .col-md-2,
+  .col-md-3 { 
+    width: 50%;
+  }
+}
+
 
 .block-content {
   h4 {
