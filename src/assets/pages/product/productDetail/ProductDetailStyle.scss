@@ -56,13 +56,15 @@ div[class*="check-"] {
   vertical-align: bottom;
 
   input[type*=radio] {
+    display: none;
+    background: #ffffff;
+    color: #000;
     margin: 4px 0 0;
     margin-top: 1px\9;
     padding: 0;
     line-height: normal;
     box-sizing: border-box;
     font-size: inherit;
-    display: none;
   }
 
 
@@ -76,7 +78,7 @@ div[class*="check-"] {
     line-height: 40px;
     border: 1px solid #000;
     background: #fff;
-    color: #fff;
+    color: #000000;
     position: relative;
     // border: 1px solid #e5e5e5;
     font-size: 12px;
@@ -88,6 +90,7 @@ div[class*="check-"] {
   &.active {
     label {
       background: #000;
+      color: #fff;
     }
   }
 }
