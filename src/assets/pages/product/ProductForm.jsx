@@ -40,6 +40,8 @@ const Item = ({ ...props }) => {
 
   )
 
+  const [proQuantity, setProQuantity] = useState()
+
   //state of Link
   const location = useLocation()
   const propsData = location.state
@@ -77,11 +79,14 @@ const Item = ({ ...props }) => {
   const countQuantity = useRef(1)
   const handleAddItem = () => {
     +countQuantity.current.value++;
+    setProQuantity(countQuantity.current.value)
   }
 
   const handleReduceItem = () => {
     if (+countQuantity.current.value > 1) {
       +countQuantity.current.value--;
+      setProQuantity(countQuantity.current.value)
+
     } else {
       return
     }
@@ -91,12 +96,12 @@ const Item = ({ ...props }) => {
   const [openCart, setOpenCart] = useState(false)
 
   const addToCart = (e) => {
+    const productQuantity = countQuantity.current.value
     e.preventDefault()
-    setOpenCart(!openCart)
-    console.log('123');
+    // setOpenCart(!openCart)
+    console.log(proQuantity);
+    return proQuantity
   }
-
-
 
   return (
     <div className='product-wrapper'>

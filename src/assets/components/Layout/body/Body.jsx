@@ -37,7 +37,7 @@ const Body = ({ ...props }) => {
                         })}
                       </ul>
                       <div className="price-product-detail">
-                        <p><span>{item.price}</span></p>
+                        <p><span>${item.price}</span></p>
                       </div>
                     </div>
                   </div>

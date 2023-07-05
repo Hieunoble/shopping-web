@@ -74,6 +74,8 @@
   font-size: 14px;
   position: relative;
   min-height: 18px;
+  color: #000;
+  opacity: .8;
 }
 
 //link
@@ -102,4 +104,9 @@ ul.img-product-detail {
     }
   }
 
+}
+
+.price-product-detail { 
+  color: #fd1f1f;
+  font-weight: 700;
 }
