@@ -9,7 +9,6 @@ const IconTest = ({ ...props }) => {
           key={icon.id}
           className={'icon-action' + ' ' + props.handleOpenIconAction(index)}
           onClick={() => props.activeIconMenu(index)}
-          // isShow={props.isShow}
         >
           <icon.Icon />
         </div>

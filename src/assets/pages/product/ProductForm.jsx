@@ -40,7 +40,7 @@ const Item = ({ ...props }) => {
 
   )
 
-  const [proQuantity, setProQuantity] = useState()
+  const [proQuantity, setProQuantity] = useState('1')
 
   //state of Link
   const location = useLocation()
@@ -99,7 +99,7 @@ const Item = ({ ...props }) => {
     const productQuantity = countQuantity.current.value
     e.preventDefault()
     // setOpenCart(!openCart)
-    console.log(proQuantity);
+    // console.log(location.state, proQuantity);
     return proQuantity
   }
 

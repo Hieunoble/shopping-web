@@ -133,19 +133,23 @@ const headingRoutes =
 
 const iconRoutes = {
   activeIcon: null,
+  isShow: false,
   objects:
     [
       {
         id: 0,
         Icon: Search,
+        // isShow: false
       },
       {
         id: 1,
         Icon: Users,
+        // isShow: false
       },
       {
         id: 2,
         Icon: Cart,
+        // isShow: false
       },
     ]
 }
