@@ -10,7 +10,6 @@ const Users = ({ ...props }) => {
   const focus = useRef()
   const handleFocusinput = () => {
     setIsFocus(!isFocus)
-    console.log(focus.current);
   }
 
   return (
@@ -20,7 +19,10 @@ const Users = ({ ...props }) => {
           <FaUserCircle className='headerLeftIcon' />
         </div>
 
-        <div className="icon-dropdown user">
+        <div
+          className="icon-dropdown user"
+          onClick={(e) => { e.stopPropagation() }}
+        >
           <div className='dropdown-arrow'>
             <VscTriangleUp className='arrow' />
           </div>

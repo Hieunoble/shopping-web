@@ -13,7 +13,10 @@ const Cart = () => {
           <BsBag className='headerLeftIcon' />
         </div>
 
-        <div className="icon-dropdown cart">
+        <div
+          className="icon-dropdown cart"
+          onClick={(e) => { e.stopPropagation() }}
+        >
           <div className='dropdown-arrow'>
             <VscTriangleUp className='arrow' />
           </div>

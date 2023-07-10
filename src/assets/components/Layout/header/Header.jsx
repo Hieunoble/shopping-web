@@ -27,7 +27,9 @@ const Header = ({ ...props }) => {
   }
 
   // Icon Action handlers
-  const activeIconMenu = (index) => {
+  const activeIconMenu = (index, e) => {
+    console.log(e.target);
+    e.stopPropagation()
     setIconMenu({ ...iconMenu, activeIcon: iconMenu.objects[index] })
     // console.log(iconMenu.objects);
   }
@@ -86,7 +88,7 @@ const Header = ({ ...props }) => {
             <div className="header-detail header-icon">
               <IconTest
                 iconRoutes={iconRoutes}
-                activeIconMenu={(index) => activeIconMenu(index)}
+                activeIconMenu={(index, e) => activeIconMenu(index, e)}
                 handleOpenIconAction={(index) => handleOpenIconAction(index)}
                 handleCloseIconAction={(index) => handleCloseIconAction(index)}
               />
